@@ -64,7 +64,7 @@ RUN apk add --no-cache --virtual=build-dependencies \
     && rm -fr /root/.cache
 
 COPY config /config/config
-COPY main.py /main.py  # Добавляем main.py в корневую директорию контейнера
+COPY main.py /main.py
 
 HEALTHCHECK --interval=30s --retries=3 CMD curl --fail http://localhost:5232 || exit 1
 VOLUME /config /data
