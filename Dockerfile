@@ -87,4 +87,4 @@ RUN #pip3 install --no-cache-dir -r /requirements.txt
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 
 CMD ["/venv/bin/radicale", "--config", "/config/config"]
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5232"]
+CMD ["/venv/bin/uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5232"]
