@@ -72,7 +72,7 @@ EXPOSE 5232
 
 COPY docker-entrypoint.sh /usr/local/bin
 
-COPY .requirements.txt /requirements.txt
+COPY requirements.txt /requirements.txt
 
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
