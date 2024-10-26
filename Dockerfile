@@ -74,7 +74,7 @@ COPY docker-entrypoint.sh /usr/local/bin
 
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r /requirements.txt
 
 #ENTRYPOINT ["docker-entrypoint.sh"]
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
